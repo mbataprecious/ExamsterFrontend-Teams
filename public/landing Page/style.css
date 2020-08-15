@@ -1,0 +1,475 @@
+:root {
+    --orange-color: #FFA012;
+    --dark-blue-color: #0d102e;
+    --fade-ash-color: #00042380;
+  }
+
+
+*{
+    font-family:'Poppins',Verdana, Geneva, Tahoma, sans-serif !Important; 
+    font-style: normal;
+}
+
+.nav-item a{
+ color: var(--dark-blue-color);
+}
+.nav-item a:hover{
+ font-weight: bold;
+}
+
+/* orange-outline demo button */
+.btn-orange-outline{
+ background-color: transparent;
+ color: var(--orange-color);
+ border-color: var(--orange-color);
+box-shadow: none;
+}
+.btn-orange-outline:hover{
+    background-color:var(--orange-color);
+    color:white ;
+    border-color: var(--orange-color); 
+}
+.btn-orange-outline:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 196, 0, 0.25);
+}
+
+.btn-orange:hover{
+    background-color:var(--orange-color);
+    color:white ;
+    border-color: var(--orange-color);
+}
+
+/* orange-fill button */
+.btn-orange-fill{
+    background-color:var(--orange-color);
+    color:white ;
+    border-color: var(--orange-color);
+    box-shadow: none;
+}
+.btn-orange-fill:hover{
+    background-color: transparent;
+    color: var(--orange-color);
+    border-color: var(--orange-color);   
+   }
+   .btn-orange-fill:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 196, 0, 0.25);
+  }
+
+.dark-blue{
+    color:var(--dark-blue-color) ;
+}
+
+.btn-dark-blue{
+  background-color:var(--dark-blue-color);
+  color:white ;
+  border-color: var(--dark-blue-color);
+  box-shadow: none;
+}
+
+.btn-dark-blue:hover{
+  color: white;
+  cursor: pointer;
+  }
+  
+
+.btn-dark-blue:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(13, 16, 46, 0.589);
+}
+
+
+/* costom check box a little bit complex*/
+.cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.cbx:not(p) {
+  margin-right: 6px;
+}
+
+.cbx span {
+  float: left;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 1px solid var(--dark-blue-color);
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+}
+.cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.cbx p {
+  padding-left: 8px;
+  line-height: 18px;
+}
+.cbx:hover span:first-child {
+  border-color: var(--dark-blue-color);
+}
+.inp-cbx {
+  position: absolute;
+  visibility: hidden;
+  
+}
+.inp-cbx:checked + .cbx span:first-child {
+  background: var(--dark-blue-color);
+  border-color: var(--dark-blue-color);
+  animation: wave 0.4s ease;
+}
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+label p{
+    display: inline;
+}
+
+
+
+/* rating stars stying */
+.rating {
+  float: left;
+  border: none;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+ follow these rules. Every browser that supports :checked also supports :not(), so
+ it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 .1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.rating > input:checked ~ label {
+  color: var(--dark-blue-color);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #0d102e53;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #0d102ece;
+}
+
+
+
+
+
+
+.bg-dark-blue{
+    background-color: var(--dark-blue-color);
+}
+
+.container-xl .navbar-toggler{
+   border-color: var(--dark-blue-color); 
+}
+
+.active{
+    font-weight: bolder;
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 10rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 40rem;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+  }
+
+  .bd-placeholder-img1{
+    background: url(./img/img1.jpg) 
+    no-repeat center center/cover;
+  }
+  .bd-placeholder-img2{
+    background: url(./img/img2.jpg) 
+    no-repeat center center/cover;
+  }
+  .bd-placeholder-img3{
+    background: url(./img/img3.jpg) 
+    no-repeat center center/cover;
+  }
+
+  .carousel-indicators{
+      bottom: 2rem;
+  }
+  .carousel-indicators li{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+  }
+
+  .title{
+      line-height: 2.8rem;
+      font-size: 2.5rem;
+  }
+
+
+.mini-box{
+    width: 213px;
+    height: 247px;
+}
+.bg-1{
+  background: url(./img/img4.jpg)  no-repeat center center/cover;
+}
+.bg-2{
+  background: url(./img/img5.jpg)  no-repeat center center/cover;
+}
+.bg-3{
+  background: url(./img/img6.jpg)  no-repeat center center/cover;
+}
+.bg-4{
+  background: url(./img/img7.jpg)  no-repeat center center/cover;
+}
+
+
+
+  @media (min-width: 769px) {
+    .title {
+      font-size: 3rem;
+      line-height: 3.3rem;
+    }
+    #carousel-blink{
+    display: none;
+  }
+
+
+  }
+
+
+  @media (max-width: 768px) {
+    .sm-display{
+      display: none;
+    }
+     .img-flat{
+      display: none;
+    }
+    .rand-box{
+      top: 2000px;
+    }
+  }
+
+
+
+
+.ash-bg{
+    background:#0d102e91 ;
+}
+
+.guide-card{
+    width: 270px;
+    height: 366px;
+}
+
+.faded-text{
+    color: var(--fade-ash-color);
+    font-size: 14px;
+}
+
+.img-box{
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 992px) {
+
+   .no-border{
+       border: none !important;
+   } 
+}
+
+.dots{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.img-box-container{
+  position: relative;
+  height: 600px; 
+
+}
+
+.box-row{
+  height: 680px; 
+  position: absolute;
+  top: 5%;
+}
+
+.organise{
+  margin-bottom: 10rem !important;
+}
+
+
+/* contact page styles */
+
+.bg-img{
+  background: url(./img/write-593333_1920\ 2.png) 
+  no-repeat center center/cover;
+  height: 560px;
+}
+
+.translate{
+  transform:translateY(-150px);
+}
+
+.form-control .border-dark{
+  border-color: var(--dark-blue-color);
+  background-color: transparent !important;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: var(--dark-blue-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(13, 16, 46, 0.69);
+}
+
+
+textarea{
+  resize: none;
+  height: 200px !important;
+}
+
+textarea.sm{
+  resize: none;
+  height: 100px !important;
+}
+
+
+.big-title{
+  font-weight: 600;
+font-size: 4rem;
+line-height: 4.875rem;
+}
+
+
+
+/* registeration page styling */
+
+.body-view{
+  height: 700px;
+  position: relative;
+}
+
+#wave-bg{
+  background: url(./img/wave.svg) 
+  no-repeat center center/cover;
+ height: 600px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+
+#wave-bg nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 550;
+}
+
+.random-design{
+  position: relative;
+}
+
+.rand-box{
+  z-index: -25;
+  position: absolute;
+  top:1700px;
+  left: 0px;
+}
+.rand-circle{
+  z-index: -25;
+  position: absolute;
+  top:591px;
+  right: 0;
+}
+.circular-fill{
+  z-index: -25;
+  opacity: 0.7;
+  position: absolute;
+  top:440px;
+ left: 0;
+}
+
+@media (max-width: 768px) {
+  .rand-box{
+    top: 1900px;
+  }
+
+  .rand-circle{
+  opacity: 0.4;
+  }
+}
+
+.form-row{
+  max-width: 720px;
+  margin: auto;
+}

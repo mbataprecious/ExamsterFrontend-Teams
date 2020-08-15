@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+    <title>examster detail Validation</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-white p-0">
+            <div class="container-xl d-flex justify-content-between">
+                <img src="../assets/img/examster.svg" style="height: 70px;" class="mr-auto" alt="logo">
+                <a href="#" class="btn py-1 px-5  btn-dark-blue" type="submit">&nbsp;Cancel&nbsp;</a>
+          </div>
+        </div>
+        </nav>
+    </header>
+    <main class="w-100 bg-color d-flex">
+        <div class="side-bar shadow-sm bg-white   d-flex align-items-center">
+           <div class="container d-flex flex-column">
+
+               <div class="requirement-mark d-flex mb-4 align-items-center">
+                   <div class="circle d-flex justify-content-center align-items-center rounded-circle bg-light-green ml-2">
+                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00008 6.66667L0.666748 10L10.6667 20L27.3334 3.33333L24.0001 0L10.6667 13.3333L4.00008 6.66667Z" fill="white"/>
+                        </svg>   
+                   </div>
+                   <p class="font-weight-bolder m-0 pl-3">Details</p>
+               </div>
+
+               <div class="requirement-mark d-flex mb-4 align-items-center">
+                   <div class="circle d-flex justify-content-center align-items-center rounded-circle bg-ash ml-2">
+   
+                   </div>
+                   <p class="m-0 pl-3 item-value">System Check</p>
+               </div>
+
+               <div class="requirement-mark d-flex mb-4 align-items-center">
+                   <div class="circle d-flex justify-content-center align-items-center rounded-circle bg-ash ml-2">
+  
+                   </div>
+                   <p class=" m-0 pl-3 item-value">Authentication</p>
+               </div>
+
+               <div class="requirement-mark d-flex mb-4 align-items-center">
+                   <div class="circle d-flex justify-content-center align-items-center rounded-circle bg-ash ml-2">
+  
+                   </div>
+                   <p class=" m-0 pl-3 item-value">Evironment</p>
+               </div>
+
+               <div class="requirement-mark d-flex mb-4 align-items-center">
+                   <div class="circle d-flex justify-content-center align-items-center rounded-circle bg-ash ml-2">
+
+                   </div>
+                   <p class="m-0 pl-3 item-value">Instructions</p>
+               </div>
+
+               <div class="requirement-mark d-flex mb-4 align-items-center">
+                   <div class="circle d-flex justify-content-center align-items-center rounded-circle bg-ash ml-2">
+ 
+                   </div>
+                   <p class="m-0 pl-3 item-value">Agreement</p>
+               </div>
+
+
+
+           </div> 
+        </div>
+        <div class="profile-nest">
+            <div class="profile-modal bg-white">
+               <div class="container  bg-dark-blue">
+                   <p class="text-white text-center font-weight-bold py-2">Detail Confirmation</p>
+               </div>
+               <div class="container d-flex justify-content-center flex-column align-items-center">
+                  <img src="./img/img1.png " class="photo rounded-circle" alt="profile photo"/>
+                  <p>Welcome, Chukwuka Chimdindu,<span class="font-weight-bolder">&nbsp;Emmanuel</span></p>
+                  <div class="details">
+                      <div class="txt-container mb-2 bg-dark-blue">
+                            <p class="text-white text-center font-weight-bold m-0 py-1">Exam Details</p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2 align-items-center">
+                        <div class="container  d-flex justify-content-center flex-column align-items-start">
+                                <p class="mb-1  sm-text">Email Address</p>
+                                <p class="mb-1   sm-text">Phone Number</p>
+                                <p class="mb-1   sm-text">Exam ID</p>
+                                <p class="mb-1   sm-text">Exam Title</p>
+                                <p class="mb-1  sm-text">Duration</p>
+                        </div> 
+                        <div class="container d-flex justify-content-start flex-column align-items-start">
+                                <p class="mb-1 sm-text-bold">chimdindue@gmail.com</p>
+                                <p class="mb-1 sm-text-bold">+234 8010 9819 775</p>
+                                <p class="mb-1 sm-text-bold">T5F-97F</p>
+                                <p class="mb-1 sm-text-bold">Engineering in society</p>
+                                <p class="mb-1 sm-text-bold">3 Hours</p>
+                        </div> 
+                    </div>                  
+                  </div>
+
+                  <!-- custom check-box -->
+                  <div class="my-2 ">
+                    <input class="inp-cbx" id="accept" type="checkbox"/>
+                    <label class="cbx d-flex align-items-center" for="accept"><span>
+                            <svg width="12px" height="10px" id="check" viewBox="0 0 12 10">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><p class="sm-text mb-0"> I have reviewed and accepted that the details above is correct</p></label>
+                    </div>
+                    
+                      <div class="button-set d-flex w-100 px-5 justify-content-between">
+                        <button type="button" class="btn  btn-outline-danger btn-sm py-1 px-4 ">Cancel</button>
+                        <button type="button" class="btn  btn-light-green bg-light-green btn-sm py-1 px-4 ">Proceed</button>
+                      </div>
+                      <p class="sm-text mb-0">If the details above are incorrect ?</p>
+                      <a href="#" class="sm-text-bold dark-blue">Contact Adminstrator</a>       
+               </div> 
+               
+
+            </div>
+        </div>
+    </main>  
+    
+</body>
+</html>
